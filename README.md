@@ -237,6 +237,18 @@ CorpX enhances startup fundraising by facilitating seamless team coordination an
 │       │               ├── publisher/
 │       │               ├── repository/
 │       │               ├── service/
+│       │               │   ├── calendar/
+│       │               │   ├── commonServiceMethods/
+│       │               │   ├── donation/
+│       │               │   ├── initiative/
+│       │               │   ├── internship/
+│       │               │   ├── jira/
+│       │               │   ├── moment/
+│       │               │   ├── project/
+│       │               │   ├── resource/
+│       │               │   ├── s3/
+│       │               │   ├── stage/
+│       │               │   ├── stage_invitation/
 │       │               ├── util/
 │       │               ├── validation/
 │       │               └── ProjectServiceApp.java
@@ -272,6 +284,19 @@ CorpX enhances startup fundraising by facilitating seamless team coordination an
 │       │               ├── repository/
 │       │               ├── scheduler/
 │       │               ├── service/
+│       │               │   ├── avatar/
+│       │               │   ├── cloud/
+│       │               │   ├── contact/
+│       │               │   ├── csv/
+│       │               │   ├── event/
+│       │               │   ├── goal/
+│       │               │   ├── jira/
+│       │               │   ├── mentorship/
+│       │               │   ├── profile/
+│       │               │   ├── recommendation/
+│       │               │   ├── subscription/
+│       │               │   ├── skill/
+│       │               │   ├── user/
 │       │               ├── validator/
 │       │               └── UserServiceApp.java
 │       ├── test/
