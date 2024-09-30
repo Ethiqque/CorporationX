@@ -1,11 +1,3 @@
-# CorporationX
-
-![URL](https://pbs.twimg.com/media/FuE_T4EWwAIgxzw.jpg:large)
-
-CorporationX (CorpX) is a social network tailored for management and fundraising startups, offering centralized communication and collaboration tools. The platform provides real-time notifications, data-driven analytics, and efficient link management, enabling seamless business operations. With features like an infinite-availability news feed, activity achievements, and a dual message payment system, CorpX drives productivity for its users.
-
-CorpX enhances startup fundraising by facilitating seamless team coordination and data-driven decision-making. Its real-time alerts keep users informed of key updates across multiple platforms, while its powerful dashboard offers a comprehensive view of performance metrics. By integrating flexible payment options and an intuitive URL shortener, CorpX streamlines communication and resource management.
-
 ## Microservices
 
 * [**User Service**](https://github.com/CorporationX/user_service/tree/basilisk-master-bc4) - A comprehensive service managing user information, authentication, and authorization.
@@ -13,11 +5,20 @@ CorpX enhances startup fundraising by facilitating seamless team coordination an
 * [**Project Service**](https://github.com/CorporationX/project_service/tree/basilisk-master-bc4) - Handles the creation, management, and collaboration of various projects.
 * [**Post Service**](https://github.com/CorporationX/post_service/tree/basilisk-master-bc4) - Facilitates the creation and management of user-generated posts and content.
 * [**Payment Service**](https://github.com/CorporationX/payment_service/tree/basilisk-master-bc4) - A web system for handling and monitoring financial transactions and book checkouts.
+* [**Account Service**](https://github.com/CorporationX/account_service/tree/basilisk-master-bc4) - Main service where user controll other services.
 * [**Analytics Service**](https://github.com/CorporationX/analytics_service/tree/basilisk-master-bc4) - Provides analytical insights and data reporting for other services.
 * [**Achievement Service**](https://github.com/CorporationX/achievement_service/tree/basilisk-master-bc4) - Manages and tracks user achievements and milestones.
 * [**Notification Service**](https://github.com/CorporationX/notification_service/tree/basilisk-master-bc4) - Handles the delivery of various notifications to users via different channels.
 * [**Account Service**](https://github.com/CorporationX/account_service/tree/basilisk-master-bc4) - Manages account information, settings, and related functionalities for users.
 * [**Infra**](https://github.com/CorporationX/infra) - Microservices configuration service for developers.
+
+# CorporationX
+
+![URL](https://pbs.twimg.com/media/FuE_T4EWwAIgxzw.jpg:large)
+
+CorporationX (CorpX) is a social network tailored for management and fundraising startups, offering centralized communication and collaboration tools. The platform provides real-time notifications, data-driven analytics, and efficient link management, enabling seamless business operations. With features like an infinite-availability news feed, activity achievements, and a dual message payment system, CorpX drives productivity for its users.
+
+CorpX enhances startup fundraising by facilitating seamless team coordination and data-driven decision-making. Its real-time alerts keep users informed of key updates across multiple platforms, while its powerful dashboard offers a comprehensive view of performance metrics. By integrating flexible payment options and an intuitive URL shortener, CorpX streamlines communication and resource management.
 
 ## Features
 
@@ -39,7 +40,7 @@ CorpX enhances startup fundraising by facilitating seamless team coordination an
 ## Project Structure
 
 ```plaintext
-├── .idea  
+├──.idea  
 ├── achievement_service/
 │   ├── gradle/wrapper/
 │   ├── .gitignore
@@ -49,7 +50,7 @@ CorpX enhances startup fundraising by facilitating seamless team coordination an
 │   ├── gradlew
 │   ├── gradlew.bat
 │   ├── settings.gradle.kts
-│   ├── src/
+│   └── src/
 │       ├── main/
 │       │   ├── java/
 │       │       └── com/
@@ -120,25 +121,25 @@ CorpX enhances startup fundraising by facilitating seamless team coordination an
 │   ├── gradlew
 │   ├── gradlew.bat
 │   ├── settings.gradle.kts
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/
-│   │   │   │   └── com/
-│   │   │   │       └── notification/
-│   │   │   │           ├── client/
-│   │   │   │           ├── config/
-│   │   │   │           ├── dto/
-│   │   │   │           ├── entity/
-│   │   │   │           ├── event/
-│   │   │   │           ├── exception/
-│   │   │   │           ├── handler/
-│   │   │   │           ├── listener/
-│   │   │   │           ├── messaging/
-│   │   │   │           ├── property/
-│   │   │   │           ├── repository/
-│   │   │   │           ├── service/
-│   │   │   │           └── NotificationServiceApp.java
-│   │   ├── test/
+│   └── src/
+│       ├── main/
+│       │   ├── java/
+│       │       └── com/
+│       │           └── notification/
+│       │               ├── client/
+│       │               ├── config/
+│       │               ├── dto/
+│       │               ├── entity/
+│       │               ├── event/
+│       │               ├── exception/
+│       │               ├── handler/
+│       │               ├── listener/
+│       │               ├── messaging/
+│       │               ├── property/
+│       │               ├── repository/
+│       │               ├── service/
+│       │               └── NotificationServiceApp.java
+│       ├── test/
 │
 ├── payment_service/
 │   ├── gradle/wrapper/
@@ -149,43 +150,27 @@ CorpX enhances startup fundraising by facilitating seamless team coordination an
 │   ├── gradlew
 │   ├── gradlew.bat
 │   ├── settings.gradle.kts
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/
-│   │   │   │   └── com/
-│   │   │   │       └── payment/
-client
-config
-controller
-dto
-enums
-event
-exception
-mapper
-model
-publisher
-repository
-scheduler
-service
-validator
-
-│   │   │   │           ├── cache/
-│   │   │   │           ├── client/
-│   │   │   │           ├── config/
-│   │   │   │           ├── controller/
-│   │   │   │           ├── dto/
-│   │   │   │           ├── event/
-│   │   │   │           ├── exception/
-│   │   │   │           ├── filter/
-│   │   │   │           ├── handler/
-│   │   │   │           ├── listener/
-│   │   │   │           ├── mapper/
-│   │   │   │           ├── model/
-│   │   │   │           ├── publisher/
-│   │   │   │           ├── repository/
-│   │   │   │           ├── service/
-│   │   │   │           └── PaymentServiceApp.java
-│   │   ├── test/
+│   └── src/
+│       ├── main/
+│       │   ├── java/
+│       │       └── com/
+│       │           └── payment/
+│       │               ├── client/
+│       │               ├── config/
+│       │               ├── controller/
+│       │               ├── dto/
+│       │               ├── enums/
+│       │               ├── event/
+│       │               ├── exception/
+│       │               ├── mapper/
+│       │               ├── model/
+│       │               ├── publisher/
+│       │               ├── repository/
+│       │               ├── scheduler/
+│       │               ├── service/
+│       │               ├── validator/
+│       │               └── PaymentServiceApp.java
+│       ├── test/
 │
 ├── post_service/
 │   ├── gradle/wrapper/
@@ -196,46 +181,31 @@ validator
 │   ├── gradlew
 │   ├── gradlew.bat
 │   ├── settings.gradle.kts
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/
-│   │   │   │   └── com/
-│   │   │   │       └── post/
-
-client
-config
-controller
-dto
-event
-exception
-filter
-handler
-mapper
-model
-property
-publisher
-repository
-scheduler
-service
-util
-validator
-│   │   │   │           ├── cache/
-│   │   │   │           ├── client/
-│   │   │   │           ├── config/
-│   │   │   │           ├── controller/
-│   │   │   │           ├── dto/
-│   │   │   │           ├── event/
-│   │   │   │           ├── exception/
-│   │   │   │           ├── filter/
-│   │   │   │           ├── handler/
-│   │   │   │           ├── listener/
-│   │   │   │           ├── mapper/
-│   │   │   │           ├── model/
-│   │   │   │           ├── publisher/
-│   │   │   │           ├── repository/
-│   │   │   │           ├── service/
-│   │   │   │           └── PostServiceApp.java
-│   │   ├── test/
+│   └── src/
+│       ├── main/
+│       │   ├── java/
+│       │       └── com/
+│       │           └── post/
+│       │               ├── client/
+│       │               ├── config/
+│       │               ├── controller/
+│       │               ├── dto/
+│       │               ├── event/
+│       │               ├── exception/
+│       │               ├── filter/
+│       │               ├── handler/
+│       │               ├── listener/
+│       │               ├── mapper/
+│       │               ├── model/
+│       │               ├── property/
+│       │               ├── publisher/
+│       │               ├── repository/
+│       │               ├── scheduler/
+│       │               ├── service/
+│       │               ├── util/
+│       │               ├── validator/
+│       │               └── PostServiceApp.java
+│       ├── test/
 │
 ├── project_service/
 │   ├── gradle/wrapper/
@@ -246,50 +216,35 @@ validator
 │   ├── gradlew
 │   ├── gradlew.bat
 │   ├── settings.gradle.kts
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/
-│   │   │   │   └── com/
-│   │   │   │       └── project/
-
-client
-config
-controller
-dto
-event
-exceptions
-filter
-handler
-mapper
-model
-pattern
-property
-publisher
-repository
-service
-util
-validation
-
-│   │   │   │           ├── cache/
-│   │   │   │           ├── client/
-│   │   │   │           ├── config/
-│   │   │   │           ├── controller/
-│   │   │   │           ├── dto/
-│   │   │   │           ├── event/
-│   │   │   │           ├── exception/
-│   │   │   │           ├── filter/
-│   │   │   │           ├── handler/
-│   │   │   │           ├── listener/
-│   │   │   │           ├── mapper/
-│   │   │   │           ├── model/
-│   │   │   │           ├── publisher/
-│   │   │   │           ├── repository/
-│   │   │   │           ├── service/
-│   │   │   │           └── ProjectServiceApp.java
-│   │   ├── test/
+│   └── src/
+│       ├── main/
+│       │   ├── java/
+│       │       └── com/
+│       │           └── project/
+│       │               ├── client/
+│       │               ├── config/
+│       │               ├── controller/
+│       │               ├── dto/
+│       │               ├── event/
+│       │               ├── exception/
+│       │               ├── filter/
+│       │               ├── handler/
+│       │               ├── listener/
+│       │               ├── mapper/
+│       │               ├── model/
+│       │               ├── pattern/
+│       │               ├── property/
+│       │               ├── publisher/
+│       │               ├── repository/
+│       │               ├── service/
+│       │               ├── util/
+│       │               ├── validation/
+│       │               └── ProjectServiceApp.java
+│       ├── test/
 │
 ├── user_service/
 │   ├── gradle/wrapper/
+│   ├── .github/workflows
 │   ├── .gitignore
 │   ├── Dockerfile
 │   ├── README.md
@@ -297,28 +252,29 @@ validation
 │   ├── gradlew
 │   ├── gradlew.bat
 │   ├── settings.gradle.kts
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/
-│   │   │   │   └── com/
-│   │   │   │       └── elevatefi/
-│   │   │   │           ├── cache/
-│   │   │   │           ├── client/
-│   │   │   │           ├── config/
-│   │   │   │           ├── controller/
-│   │   │   │           ├── dto/
-│   │   │   │           ├── event/
-│   │   │   │           ├── exception/
-│   │   │   │           ├── filter/
-│   │   │   │           ├── handler/
-│   │   │   │           ├── listener/
-│   │   │   │           ├── mapper/
-│   │   │   │           ├── model/
-│   │   │   │           ├── publisher/
-│   │   │   │           ├── repository/
-│   │   │   │           ├── service/
-│   │   │   │           └── UserServiceApp.java
-│   │   ├── test/
+│   └── src/
+│       ├── main/
+│       │   ├── java/
+│       │       └── com/
+│       │           └── user/
+│       │               ├── client/
+│       │               ├── config/
+│       │               ├── controller/
+│       │               ├── dto/
+│       │               ├── entity/
+│       │               ├── event/
+│       │               ├── exception/
+│       │               ├── filter/
+│       │               ├── handler/
+│       │               ├── listener/
+│       │               ├── mapper/
+│       │               ├── publisher/
+│       │               ├── repository/
+│       │               ├── scheduler/
+│       │               ├── service/
+│       │               ├── validator/
+│       │               └── UserServiceApp.java
+│       ├── test/
 │
 ├── account_service/
 │   ├── gradle/wrapper/
@@ -329,28 +285,27 @@ validation
 │   ├── gradlew
 │   ├── gradlew.bat
 │   ├── settings.gradle.kts
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/
-│   │   │   │   └── com/
-│   │   │   │       └── elevatefi/
-│   │   │   │           ├── cache/
-│   │   │   │           ├── client/
-│   │   │   │           ├── config/
-│   │   │   │           ├── controller/
-│   │   │   │           ├── dto/
-│   │   │   │           ├── event/
-│   │   │   │           ├── exception/
-│   │   │   │           ├── filter/
-│   │   │   │           ├── handler/
-│   │   │   │           ├── listener/
-│   │   │   │           ├── mapper/
-│   │   │   │           ├── model/
-│   │   │   │           ├── publisher/
-│   │   │   │           ├── repository/
-│   │   │   │           ├── service/
-│   │   │   │           └── UserServiceApp.java
-│   │   ├── test/
+│   └── src/
+│       ├── main/
+│       │   ├── java/
+│       │       └── com/
+│       │           └── account/
+│       │               ├── client/
+│       │               ├── config/
+│       │               ├── controller/
+│       │               ├── dto/
+│       │               ├── exception/
+│       │               ├── filter/
+│       │               ├── mapper/
+│       │               ├── model/
+│       │               ├── property/
+│       │               ├── repository/
+│       │               ├── scheduler/
+│       │               ├── service/
+│       │               ├── util/
+│       │               ├── validator/
+│       │               └── AccountServiceApp.java
+│       ├── test/
 │
 ├── .gitignore
 ├── .gitmodules
